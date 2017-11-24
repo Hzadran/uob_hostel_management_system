@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1><%= link_to 'Welcome To Hostel Form', hostel_forms_path %></h1></center>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Cnic image</th>
+      <th>Name</th>
+      <th>Father name</th>
+      <th>Department</th>
+
+      <th>Date Of Birth</th>
+      <th>Cnic number</th>
+
+      <th>Mobile number</th>
+
+      <th>University registration number</th>
+      <th>Session </th>
+      <th>Hostel fees</th>
+      <th>Chalan number</th>
+      <th>Pay date</th>
+      <th>Bank</th>
+      <th>Local</th>
+      <th>City</th>
+
+      <th>Previous block no</th>
+      <th>Previous room no</th>
+      <th>New block no</th>
+      <th>New room no</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hostel_forms.each do |hostel_form| %>
+      <tr>
+       <td><%=  image_tag hostel_form.image.thumb.url  %></td>
+
+        <td><%= hostel_form.name %></td>
+        <td><%= hostel_form.father_name %></td>
+        <td><%= hostel_form.department %></td>
+        <td><%= hostel_form.date_of_birth %></td>
+
+        <td><%= hostel_form.cnic_number %></td>
+
+        <td><%= hostel_form.mobile_number %></td>
+
+        <td><%= hostel_form.university_registration_number %></td>
+        <td><%= hostel_form.session%></td>
+        <td><%= hostel_form.hostel_fees %></td>
+        <td><%= hostel_form.chalan_number %></td>
+        <td><%= hostel_form.pay_date %></td>
+        <td><%= hostel_form.bank %></td>
+        <td><%= hostel_form.local %></td>
+        <td><%= hostel_form.city %></td>
+
+        <td><%= hostel_form.previous_block_no %></td>
+        <td><%= hostel_form.previous_room_no %></td>
+        <td><%= hostel_form.new_block_no %></td>
+        <td><%= hostel_form.new_room_no %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<CENTER><%= link_to 'Print Tasks', hostel_form_path(format: 'pdf') %></CENTER>

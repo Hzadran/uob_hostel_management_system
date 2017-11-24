@@ -1,0 +1,2 @@
+module HostelBlocksHelper
+end

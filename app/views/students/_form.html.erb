@@ -1,0 +1,43 @@
+<%= simple_form_for(student) do |f| %>
+  
+<%= f.error_notification %>
+<div class="form-inputs">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+    <% if f.object.image? %>
+      <%= image_tag f.object.image.thumb.url %>
+      <%= f.label :remove_image %>
+      <%= f.check_box :remove_image %> 
+    <% end %>
+
+<div class="form-inputs">
+    <%= f.input :upc %>
+    <%= f.input :name %>
+    <%= f.input :father_name %>
+    <%= f.input :department %>
+    <%= f.input :chairman %>
+    <%= f.input :cnic_no %>
+    <%= f.input :cell_no %>
+    <%= f.input :emer_cell_no %>
+    <%= f.input :age %>
+    <%= f.input :city %>
+    <%= f.input :local %>
+    <%= f.input :hostel_fees %>
+    <%= f.input :chalan_no %>
+    <%= f.input :pay_date %>
+    <%= f.input :bank %>
+    <%= f.input :nationality %>
+    <%= f.input :address %>
+    <%= f.input :blood_group%>
+    <%= f.input :university_regestration_no %>
+    <%= f.input :session_id %>
+    <%= f.input :hostel_block_id%>
+    <%= f.input :room_id %>
+  
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+

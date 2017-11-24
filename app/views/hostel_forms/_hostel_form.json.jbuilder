@@ -1,0 +1,2 @@
+json.extract! hostel_form, :id, :image, :cnic_image, :name, :father_name, :department, :nationality, :date_of_birth, :cnic_number, :mobile_number, :emergency_mb_number, :university_registration_number, :session, :hostel_fees, :chalan_number, :pay_date, :bank, :local, :city, :postel_address, :permanent_address, :religion, :blood_group, :previous_block_no, :previous_room_no, :new_block_no, :new_room_no, :created_at, :updated_at
+json.url hostel_form_url(hostel_form, format: :json)

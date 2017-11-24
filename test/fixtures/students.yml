@@ -1,0 +1,46 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: MyString
+  name: MyString
+  father_name: MyString
+  cnic_no: MyString
+  cell_no: MyString
+  emer_cell_no: MyString
+  age: 2017-09-30
+  city: MyString
+  local: MyString
+  hostel_fees: 1
+  chalan_no: 1
+  pay_date: 2017-09-30
+  bank: MyString
+  nationality: MyString
+  address: MyString
+  blood_group: MyString
+  university_regestration_no: MyString
+  session: one
+  hostel_block: one
+  departmen: one
+  room: one
+
+two:
+  image: MyString
+  name: MyString
+  father_name: MyString
+  cnic_no: MyString
+  cell_no: MyString
+  emer_cell_no: MyString
+  age: 2017-09-30
+  city: MyString
+  local: MyString
+  hostel_fees: 1
+  chalan_no: 1
+  pay_date: 2017-09-30
+  bank: MyString
+  nationality: MyString
+  address: MyString
+  blood_group: MyString
+  university_regestration_no: MyString
+  session: two
+  hostel_block: two
+  room: two

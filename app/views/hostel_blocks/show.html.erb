@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Block no:</strong>
+  <%= @hostel_block.block_no %>
+</p>
+
+<p>
+  <strong>Block warden:</strong>
+  <%= @hostel_block.block_warden %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @hostel_block.location %>
+</p>
+
+<%= link_to 'Edit', edit_hostel_block_path(@hostel_block) %> |
+<%= link_to 'Back', hostel_blocks_path %>

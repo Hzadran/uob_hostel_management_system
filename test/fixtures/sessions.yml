@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sess_starting: 2017-09-30
+  sess_ending: 2017-09-30
+  duration: MyString
+
+two:
+  sess_starting: 2017-09-30
+  sess_ending: 2017-09-30
+  duration: MyString

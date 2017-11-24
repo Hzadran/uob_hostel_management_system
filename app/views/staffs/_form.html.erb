@@ -1,0 +1,27 @@
+<%= simple_form_for(staff) do |f| %>
+  
+<%= f.error_notification %>
+<div class="form-inputs">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+    <% if f.object.image? %>
+      <%= image_tag f.object.image.thumb.url %>
+      <%= f.label :remove_image %>
+      <%= f.check_box :remove_image %> 
+    <% end %>
+
+<div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :f_name %>
+    <%= f.input :designation %>
+    <%= f.input :age %>
+    <%= f.input :sallary %>
+    <%= f.input :cell %>
+    
+  
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,32 @@
+<%= form_for(hostel_block) do |f| %>
+  <% if hostel_block.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hostel_block.errors.count, "error") %> prohibited this hostel_block from being saved:</h2>
+
+      <ul>
+      <% hostel_block.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :block_no %>
+    <%= f.number_field :block_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :block_warden %>
+    <%= f.text_field :block_warden %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

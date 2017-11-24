@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+ <%= image_tag @staff.image.thumb.url %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @staff.name %>
+</p>
+
+<p>
+  <strong>F name:</strong>
+  <%= @staff.f_name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @staff.designation %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @staff.age %>
+</p>
+
+<p>
+  <strong>Sallary:</strong>
+  <%= @staff.sallary %>
+</p>
+
+<p>
+  <strong>Cell:</strong>
+  <%= @staff.cell %>
+</p>
+
+<%= link_to 'Edit', edit_staff_path(@staff) %> |
+<%= link_to 'Back', staffs_path %>

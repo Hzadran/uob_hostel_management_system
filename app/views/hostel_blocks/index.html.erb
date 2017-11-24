@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hostel Blocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Block no</th>
+      <th>Block warden</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hostel_blocks.each do |hostel_block| %>
+      <tr>
+        <td><%= hostel_block.block_no %></td>
+        <td><%= hostel_block.block_warden %></td>
+        <td><%= hostel_block.location %></td>
+        <td><%= link_to 'Show', hostel_block %></td>
+        <td><%= link_to 'Edit', edit_hostel_block_path(hostel_block) %></td>
+        <td><%= link_to 'Destroy', hostel_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hostel Block', new_hostel_block_path %>

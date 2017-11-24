@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+</style>
+</head>
+<body>
+
+<%= @student.upc %>
+<%= content_tag :s do %>
+<% end if @student.image_url.present? %>
+<!-- Add icon library -->
+<div class="card">
+  <%= link_to image_tag('log.jpg', width: '100%', height: '60') %>
+ <button>HOSTEL CARD</button>
+  <%= link_to image_tag('b.png', width: '90%', height: '10') %>
+ Block: <%= @student.hostel_block_id %>
+  <%= image_tag @student.image.thumb%>Room: <%= @student.room_id %>
+   <p>Sign Authority</p>
+   <p><%= link_to image_tag('john.png', width: '30%', height: '30') %></p>
+  <h1><%= @student.name %></h1>
+  <p><%= @student.father_name %></p>
+  <p><%= @student.cnic_no %></p>
+  <p><%= @student.cell_no %></p>
+  <p>Exp Date: &nbsp; &nbsp; 31.12.2017</p>
+  <p><%= @student.city %></p>
+  <p><button><%= @student.department %></button></p>
+</div>
+</div>
+
+</body>
+</html>
+
+<br>
+
+<center>
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %></center>
+
+
+
+<!-- CSS -->
+<style>
+/* Force scrollbars onto browser window */
+body {
+margin-bottom: 200%;
+}
+
+/* Box styles */
+.myBox {
+border: none;
+padding: 5px;
+font: 24px/36px sans-serif;
+width: 200px;
+height: 200px;
+overflow: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+::-webkit-scrollbar-track {
+background: gold;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background: yellowgreen;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #88ba1c;
+}
+</style>
+</head>
+<body>
+
+
+
+</body>
+</html>

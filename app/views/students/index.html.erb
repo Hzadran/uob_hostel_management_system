@@ -1,0 +1,69 @@
+<h1><%= link_to 'New Student', new_student_path %></h1>
+
+<table class='table table-condensed'>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>upc</th>
+      <th>Name</th>
+      <th>Father name</th>
+      <th>Department</th>
+      <th>Chairman</th>
+      <th>Cnic no</th>
+      <th>Cell no</th>
+      <th>Emer cell no</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>Local</th>
+      <th>Hostel fees</th>
+      <th>Chalan no</th>
+      <th>Pay date</th>
+      <th>Bank</th>
+      <th>Nationality</th>
+      <th>Address</th>
+      <th>Blood group</th>
+      <th>University regestration no</th>
+      <th>Session</th>
+      <th>Hostel block</th>
+      <th>Room</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+      <td><%=  image_tag student.image.thumb.url  %></td>
+       <td><%= student.upc %></td>
+        <td><%= student.name %></td>
+        <td><%= student.father_name %></td>
+        <td><%= student.department %></td>
+        <td><%= student.chairman %></td>
+        <td><%= student.cnic_no %></td>
+        <td><%= student.cell_no %></td>
+        <td><%= student.emer_cell_no %></td>
+        <td><%= student.age %></td>
+        <td><%= student.city %></td>
+        <td><%= student.local %></td>
+        <td><%= student.hostel_fees %></td>
+        <td><%= student.chalan_no %></td>
+        <td><%= student.pay_date %></td>
+        <td><%= student.bank %></td>
+        <td><%= student.nationality %></td>
+        <td><%= student.address %></td>
+        <td><%= student.blood_group %></td>
+        <td><%= student.university_regestration_no %></td>
+        <td><%= student.session %></td>
+        <td><%= student.hostel_block %></td>
+        <td><%= student.room %></td>
+        <td><%= link_to 'Show', student %></td>
+        <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<center><%= link_to 'New Student', new_student_path %></center>
